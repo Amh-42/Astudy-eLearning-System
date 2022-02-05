@@ -1,0 +1,30 @@
+<style>
+  .navbar {
+    background-color: #333;
+    margin: 10px;
+    padding: 10px;
+  }
+  .navbar a {
+    padding: 20px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+  }
+  j .navbar a:active {
+    color: darkkhaki;
+  }
+  .navbar a:hover {
+    color: rgb(107, 179, 189);
+  }
+</style>
+
+<div class="navbar">
+  <p>
+    <a href="{% url 'courses:index' %}"><b>Astudy</b></a>
+    <a href="{% url 'courses:courses' %}"><b>Courses</b></a>
+  </p>
+</div>
+
+{% block content %}{% endblock content %}

@@ -1,0 +1,47 @@
+<style>
+  .card {
+    margin: 20px;
+    text-decoration: none;
+    padding: 20px;
+    display: flex;
+    background-color: #f4f4f4;
+    width: 20%;
+    color: #333;
+    font-weight: 200;
+    font-size: 20;
+    font-family: Arial, Helvetica, sans-serif;
+    cursor: pointer;
+  }
+  .card a {
+    text-decoration: none;
+    color: #333;
+  }
+  .card:hover a {
+    color: #333;
+    background-color: #fff;
+    scale: 1.05;
+  }
+  .header {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 30px;
+  }
+  .separator {
+    padding: 2px;
+    background-color: #333;
+    margin: 20px;
+  }</style
+>{% extends "courses/base.html" %} {% block content %}
+<div class="header">
+  <h2>Latest News</h2>
+</div>
+<div class="separator"></div>
+<div class="card">
+  <a href="{% url 'courses:courses' %}">
+    <p>
+      Learning Log helps you keep track of your learning, for any topic you're
+      learning about.
+    </p>
+  </a>
+</div>
+{% endblock content %}

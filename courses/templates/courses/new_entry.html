@@ -1,0 +1,8 @@
+{% extends "courses/base.html" %} {% block content %}
+<p><a href="{% url 'courses:course' course.id %}">{{ course }}</a></p>
+<p>Add a new entry:</p>
+<form action="{% url 'courses:new_entry' course.id %}" method="post">
+  {% csrf_token %} {{ form.as_p }}
+  <button name="submit">Add entry</button>
+</form>
+{% endblock content %}
